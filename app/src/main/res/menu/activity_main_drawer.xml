@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="STOCK">
+            <menu>
+                <item
+                    android:id="@+id/nav_checkStock"
+                    android:icon="@drawable/ic_check_avaibility_24dp"
+                    android:title="Check Stock Avaibility" />
+                <item
+                    android:id="@+id/nav_viewStock"
+                    android:icon="@drawable/ic_stock_24dp"
+                    android:title="View Stock" />
+            </menu>
+
+        </item>
+
+
+    </group>
+
+    <item android:title="SETTINGS">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/money"
+                android:title="Change Commssion" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/user_settings"
+                android:title="User Settings"/>
+        </menu>
+    </item>
+
+</menu>
