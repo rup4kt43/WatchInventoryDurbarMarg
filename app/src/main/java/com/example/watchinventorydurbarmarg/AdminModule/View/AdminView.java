@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.View;
+package com.example.watchinventorydurbarmarg.AdminModule.View;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -16,12 +16,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.watchinventorydurbarmarg.Adapter.AdminAdapter;
-import com.example.watchinventorydurbarmarg.Contracts.AdminContracts;
-import com.example.watchinventorydurbarmarg.Presenter.AdminPresenter;
+
+import com.example.watchinventorydurbarmarg.AdminModule.Adapter.AdminAdapter;
+import com.example.watchinventorydurbarmarg.AdminModule.Contracts.AdminContracts;
+import com.example.watchinventorydurbarmarg.AdminModule.Presenter.AdminPresenter;
 import com.example.watchinventorydurbarmarg.R;
 
 public class AdminView extends AppCompatActivity
@@ -30,6 +32,7 @@ public class AdminView extends AppCompatActivity
     final String[] spinner_string = {"Daily", "Monthly", "Yearly"};
     private AdminPresenter adminPresenter;
     private Button select;
+    private DatePicker datePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +98,20 @@ public class AdminView extends AppCompatActivity
                 Dialog dialog = new Dialog(AdminView.this);
                 dialog.setContentView(R.layout.date_picker_custom_dialog);
                 dialog.show();
+
+                datePicker = dialog.findViewById(R.id.spinner_datePicker);
+                Button applyBtn = dialog.findViewById(R.id.dp_btn_apply);
+
+
+                applyBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        String month = String.valueOf(datePicker.getMonth());
+                        String year = String.valueOf(datePicker.getYear());
+                        //   Toast.makeText(AdminView.this, day + "-"+ month + "-" + year, Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         });
 

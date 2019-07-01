@@ -1,7 +1,7 @@
-package com.example.watchinventorydurbarmarg.Presenter;
+package com.example.watchinventorydurbarmarg.AdminModule.Presenter;
 
-import com.example.watchinventorydurbarmarg.Contracts.AdminContracts;
-import com.example.watchinventorydurbarmarg.View.AdminView;
+import com.example.watchinventorydurbarmarg.AdminModule.Contracts.AdminContracts;
+import com.example.watchinventorydurbarmarg.AdminModule.View.AdminView;
 
 public class AdminPresenter implements AdminContracts.presenter {
     private final AdminView view;

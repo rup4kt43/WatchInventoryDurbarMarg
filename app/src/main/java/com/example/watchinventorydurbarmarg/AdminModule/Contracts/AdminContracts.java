@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.Contracts;
+package com.example.watchinventorydurbarmarg.AdminModule.Contracts;
 
 public interface AdminContracts {
 

@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.Adapter;
+package com.example.watchinventorydurbarmarg.AdminModule.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.watchinventorydurbarmarg.Contracts.AdminContracts;
+import com.example.watchinventorydurbarmarg.AdminModule.Contracts.AdminContracts;
 import com.example.watchinventorydurbarmarg.R;
-import com.example.watchinventorydurbarmarg.View.AdminView;
+import com.example.watchinventorydurbarmarg.AdminModule.View.AdminView;
 
 public class AdminAdapter extends RecyclerView.Adapter {
 
