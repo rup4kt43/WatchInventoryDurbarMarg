@@ -1,8 +1,29 @@
 package com.example.watchinventorydurbarmarg.UserLogin.UserLoginDTO;
 
+import com.google.gson.annotations.SerializedName;
+
 public class DTO {
-    String username;
-    String password;
+
+    @SerializedName("uname")
+    private String username;
+
+    @SerializedName("password")
+    private String password;
+
+    @SerializedName("division")
+    private String division;
+
+    @SerializedName("role")
+    private String role;
+
+
+    public DTO(String username, String password, String division, String role) {
+        this.username = username;
+        this.password = password;
+        this.division = division;
+        this.role = role;
+    }
+
 
     public String getUsername() {
         return username;
@@ -18,5 +39,21 @@ public class DTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getDivision() {
+        return division;
+    }
+
+    public void setDivision(String division) {
+        this.division = division;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

@@ -1,6 +1,5 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C4D5DD"
@@ -25,11 +24,11 @@
             android:background="@color/cardColor">
 
             <ImageView
-                android:src="@drawable/sigin_ims_logo"
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="@android:color/white"
+                android:src="@drawable/sigin_ims_logo"
                 app:layout_constraintBottom_toTopOf="@+id/etUser"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +84,7 @@
                 android:layout_marginEnd="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -93,28 +92,105 @@
                 app:layout_constraintTop_toBottomOf="@+id/etPassword"
                 app:layout_constraintVertical_bias="0.117">
 
-                <CheckBox
-                    android:id="@+id/cb_keepSignedIn"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@android:color/white"
-                    android:text="Keep me signed in"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp" />
+                    <CheckBox
+                        android:id="@+id/cb_keepSignedIn"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@android:color/white"
+                        android:text="Keep me signed in"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="Forget your password?"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
 
                 <TextView
-                    android:gravity="end"
-                    android:textSize="10sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="IP ADDRESS"
                     android:textColor="@android:color/white"
-                    android:text="Forget your password?"
+
                     />
 
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:text="192"
+                        android:id="@+id/et_ip1"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/new_edit_text_box"
+                        android:gravity="center"
+                        android:hint="IP1" />
+
+                    <EditText
+                        android:text="168"
+                        android:id="@+id/et_ip2"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/new_edit_text_box"
+                        android:gravity="center"
+                        android:hint="IP2" />
+
+                    <EditText
+                        android:text="125"
+                        android:id="@+id/et_ip3"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/new_edit_text_box"
+                        android:gravity="center"
+                        android:hint="IP3" />
+
+                    <EditText
+                        android:text="150"
+                        android:id="@+id/et_ip4"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/new_edit_text_box"
+                        android:gravity="center"
+                        android:hint="IP4" />
+
+                    <EditText
+                        android:text="45457"
+                        android:id="@+id/et_port"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/new_edit_text_box"
+                        android:gravity="center"
+                        android:hint="PORT" />
+
+
+                </LinearLayout>
 
 
             </LinearLayout>
+
 
             <Button
                 android:id="@+id/btnLogin"

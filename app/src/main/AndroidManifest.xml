@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.watchinventorydurbarmarg">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:name=".Utilities.GlobalContext"
@@ -11,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".UserLogin.View.UserLoginView"
+            android:name=".Sales.View.SalesView"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AdminModule.View.AdminView"/>
+        <activity android:name=".UserLogin.View.UserLoginView"/>
     </application>
 
 </manifest>

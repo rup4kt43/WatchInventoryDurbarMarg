@@ -28,7 +28,7 @@
                 android:icon="@drawable/money"
                 android:title="Change Commssion" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_addNewUser"
                 android:icon="@drawable/user_settings"
                 android:title="User Settings"/>
         </menu>

@@ -1,6 +1,7 @@
 package com.example.watchinventorydurbarmarg.AdminModule.View;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,11 +21,11 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-
 import com.example.watchinventorydurbarmarg.AdminModule.Adapter.AdminAdapter;
 import com.example.watchinventorydurbarmarg.AdminModule.Contracts.AdminContracts;
 import com.example.watchinventorydurbarmarg.AdminModule.Presenter.AdminPresenter;
 import com.example.watchinventorydurbarmarg.R;
+
 
 public class AdminView extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AdminContracts.view {
@@ -155,6 +156,10 @@ public class AdminView extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
+        if (id == R.id.nav_addNewUser) {
+            Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT).show();
+        }
 
     /*    if (id == R.id.nav_home) {
             // Handle the camera action

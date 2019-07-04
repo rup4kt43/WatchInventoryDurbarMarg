@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.UserLogin.API;
+package com.example.watchinventorydurbarmarg.Sales.API;
 
 import android.util.Log;
 
@@ -8,27 +8,25 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.watchinventorydurbarmarg.UserLogin.Contracts.UserLoginContracts;
-import com.example.watchinventorydurbarmarg.UserLogin.UserLoginDTO.LoginResponse;
+import com.example.watchinventorydurbarmarg.Sales.DTO.SalesResponse;
 import com.example.watchinventorydurbarmarg.Utilities.GlobalContext;
-import com.example.watchinventorydurbarmarg.Utilities.LoginIPaddress;
 import com.google.gson.Gson;
 
-public class UserLoginAPI {
-    public void validateWithAPI(final String uname, final String password, final UserLoginContracts.modelAPICallBack callBack) {
+public class SalesAPI {
 
-
-        Log.e("PASS", password);
-
-        String url = "http://" + LoginIPaddress.ipAddress + "/api/login?username=" + uname + "&password=" + password;
+    public void loadDetails(String barcode) {
+        // String url = "http://" + LoginIPaddress.ipAddress + "/api/loadDetails?barcode=" + barcode;
+        String url = "http://192.168.125.150:45455/api/loadDetails?bcode=" + barcode;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
-                String role = String.valueOf(loginResponse.getResult().getValue().getRole());
-                callBack.onSuccessResponse(role);
-
+                Log.e("Response", response);
+                SalesResponse salesDTO = new Gson().fromJson(response, SalesResponse.class);
+                Log.e("Model", salesDTO.getResult().getValue().getMODEL());
+                Log.e("MRP", String.valueOf(salesDTO.getResult().getValue().getRATEA()));
+                Log.e("CostPrice", String.valueOf(salesDTO.getResult().getValue().getPRATEA()));
+                Log.e("PurchaseDate ", String.valueOf(salesDTO.getResult().getValue().getPURCHASEDATE()));
             }
         }, new Response.ErrorListener() {
             @Override
