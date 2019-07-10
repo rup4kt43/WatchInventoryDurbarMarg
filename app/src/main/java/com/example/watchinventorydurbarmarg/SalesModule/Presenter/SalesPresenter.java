@@ -1,8 +1,8 @@
-package com.example.watchinventorydurbarmarg.Sales.Presenter;
+package com.example.watchinventorydurbarmarg.SalesModule.Presenter;
 
-import com.example.watchinventorydurbarmarg.Sales.Contracts.SalesContracts;
-import com.example.watchinventorydurbarmarg.Sales.Model.SalesModel;
-import com.example.watchinventorydurbarmarg.Sales.View.SalesView;
+import com.example.watchinventorydurbarmarg.SalesModule.Contracts.SalesContracts;
+import com.example.watchinventorydurbarmarg.SalesModule.Model.SalesModel;
+import com.example.watchinventorydurbarmarg.SalesModule.View.SalesView;
 
 public class SalesPresenter implements SalesContracts.presenter {
     private SalesContracts.view view;

@@ -24,7 +24,7 @@
     <item android:title="SETTINGS">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_changeCommission"
                 android:icon="@drawable/money"
                 android:title="Change Commssion" />
             <item

@@ -25,8 +25,8 @@ public class UserLoginPresenter implements UserLoginContracts.presenter {
             view.showToast("Fields cannot be empty!");
         } else {
             LoginIPaddress.setIpAddress(ip1, ip2, ip3, ip4, port);
-            encPassword = PasswordEncryption.Encrypt(pass, "encryption");
-            model.validateCredentials(uname, encPassword, new UserLoginContracts.presenterModelCallBack() {
+
+            model.validateCredentials(uname, pass, new UserLoginContracts.presenterModelCallBack() {
                 @Override
                 public void onSuccessResponse(String msg) {
                     switch (msg) {

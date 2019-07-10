@@ -13,7 +13,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.watchinventorydurbarmarg.AdminModule.View.AdminView;
+import com.example.watchinventorydurbarmarg.CashierModule.View.CashierView;
 import com.example.watchinventorydurbarmarg.R;
+import com.example.watchinventorydurbarmarg.SalesModule.View.SalesView;
 import com.example.watchinventorydurbarmarg.UserLogin.Contracts.UserLoginContracts;
 import com.example.watchinventorydurbarmarg.UserLogin.Presenter.UserLoginPresenter;
 
@@ -94,16 +96,21 @@ public class UserLoginView extends Activity implements UserLoginContracts.view {
 
     @Override
     public void switchCashier() {
-
+            startActivity(new Intent(UserLoginView.this, CashierView.class));
+            this.finish();
     }
 
     @Override
     public void switchAdmin() {
+        startActivity(new Intent(UserLoginView.this, AdminView.class));
+        this.finish();
 
     }
 
     @Override
     public void switchSales() {
+        startActivity(new Intent(UserLoginView.this, SalesView.class));
+        this.finish();
 
     }
 }

@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.Sales.API;
+package com.example.watchinventorydurbarmarg.SalesModule.API;
 
 import android.util.Log;
 
@@ -8,7 +8,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.watchinventorydurbarmarg.Sales.DTO.SalesResponse;
+import com.example.watchinventorydurbarmarg.SalesModule.DTO.SalesResponse;
 import com.example.watchinventorydurbarmarg.Utilities.GlobalContext;
 import com.google.gson.Gson;
 

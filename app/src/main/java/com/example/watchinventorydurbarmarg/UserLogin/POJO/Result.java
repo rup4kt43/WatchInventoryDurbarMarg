@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.UserLogin.UserLoginDTO;
+package com.example.watchinventorydurbarmarg.UserLogin.POJO;
 
 import com.google.gson.annotations.SerializedName;
 

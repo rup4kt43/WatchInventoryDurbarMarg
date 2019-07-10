@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.example.watchinventorydurbarmarg.AdminModule.Adapter.AdminAdapter;
 import com.example.watchinventorydurbarmarg.AdminModule.Contracts.AdminContracts;
 import com.example.watchinventorydurbarmarg.AdminModule.Presenter.AdminPresenter;
+import com.example.watchinventorydurbarmarg.Commission.View.CommissionView;
 import com.example.watchinventorydurbarmarg.R;
 
 
@@ -40,7 +41,9 @@ public class AdminView extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        toolbar.setTitle("CASHIER");
+
 
         adminPresenter = new AdminPresenter(this);
 
@@ -159,6 +162,10 @@ public class AdminView extends AppCompatActivity
 
         if (id == R.id.nav_addNewUser) {
             Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT).show();
+        }
+
+        if (id == R.id.nav_changeCommission) {
+            startActivity(new Intent(AdminView.this, CommissionView.class));
         }
 
     /*    if (id == R.id.nav_home) {

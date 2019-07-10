@@ -2,28 +2,35 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.watchinventorydurbarmarg">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true"
         android:name=".Utilities.GlobalContext"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Sales.View.SalesView"
+            android:name=".CashierModule.View.CashierView"
+            android:label="@string/title_activity_cashier"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".UserLogin.View.UserLoginView"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdminModule.View.AdminView"/>
-        <activity android:name=".UserLogin.View.UserLoginView"/>
+
+        <activity android:name=".AdminModule.View.AdminView" />
+        <activity android:name=".SalesModule.View.SalesView" />
+        <activity android:name=".CartModule.View.CartView" />
+        <activity android:name=".Commission.View.CommissionView"/>
     </application>
 
 </manifest>

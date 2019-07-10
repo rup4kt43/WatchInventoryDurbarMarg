@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.Sales.View;
+package com.example.watchinventorydurbarmarg.SalesModule.View;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,8 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.watchinventorydurbarmarg.R;
-import com.example.watchinventorydurbarmarg.Sales.Contracts.SalesContracts;
-import com.example.watchinventorydurbarmarg.Sales.Presenter.SalesPresenter;
+import com.example.watchinventorydurbarmarg.SalesModule.Contracts.SalesContracts;
+import com.example.watchinventorydurbarmarg.SalesModule.Presenter.SalesPresenter;
 
 public class SalesView extends AppCompatActivity implements SalesContracts.view {
     private EditText barcode;

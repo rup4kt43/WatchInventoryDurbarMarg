@@ -1,6 +1,6 @@
-package com.example.watchinventorydurbarmarg.Sales.Model;
+package com.example.watchinventorydurbarmarg.SalesModule.Model;
 
-import com.example.watchinventorydurbarmarg.Sales.API.SalesAPI;
+import com.example.watchinventorydurbarmarg.SalesModule.API.SalesAPI;
 
 public class SalesModel {
     private SalesAPI api;
