@@ -14,8 +14,6 @@ import com.example.watchinventorydurbarmarg.Utilities.GlobalContext;
 import com.example.watchinventorydurbarmarg.Utilities.LoginIPaddress;
 import com.google.gson.Gson;
 
-import java.net.ProtocolException;
-
 public class UserLoginAPI {
     public void validateWithAPI(final String uname, final String password, final UserLoginContracts.modelAPICallBack callBack) {
 
@@ -23,30 +21,33 @@ public class UserLoginAPI {
         //  Log.e("PASS", password);
 
         String url = "http://" + LoginIPaddress.ipAddress + "/api/login?username=" + uname + "&password=" + password;
-        try {
-            StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
-                    String role = String.valueOf(loginResponse.getResult().getValue().getRole());
-                    callBack.onSuccessResponse(role);
-
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    error.printStackTrace();
-                    Log.e("Error Response", String.valueOf(error));
-                }
-            });
-            RequestQueue requestQueue = Volley.newRequestQueue(GlobalContext.getAppContext());
-            requestQueue.add(stringRequest);
-
-        }catch (Exception e){
-            Log.e("ERROR", e.getMessage());
-        }
+        Log.e("URL MSG",url);
 
 
-        }
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
+                String role = String.valueOf(loginResponse.getValue().get(0).getROLE());
+                callBack.onSuccessResponse(role);
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                Log.e("Error Response", String.valueOf(error));
+            }
+        });
+        RequestQueue requestQueue = Volley.newRequestQueue(GlobalContext.getAppContext());
+        requestQueue.add(stringRequest);
+
+
+    }
+
+
+
 
 }
+
+

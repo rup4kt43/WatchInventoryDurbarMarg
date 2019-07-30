@@ -25,7 +25,9 @@ import com.example.watchinventorydurbarmarg.AdminModule.Adapter.AdminAdapter;
 import com.example.watchinventorydurbarmarg.AdminModule.Contracts.AdminContracts;
 import com.example.watchinventorydurbarmarg.AdminModule.Presenter.AdminPresenter;
 import com.example.watchinventorydurbarmarg.Commission.View.CommissionView;
+import com.example.watchinventorydurbarmarg.Expenses.View.ExpensesView;
 import com.example.watchinventorydurbarmarg.R;
+import com.example.watchinventorydurbarmarg.UserSettings.View.UserSettingsView;
 
 
 public class AdminView extends AppCompatActivity
@@ -42,7 +44,7 @@ public class AdminView extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
-        toolbar.setTitle("CASHIER");
+        toolbar.setTitle("ADMIN");
 
 
         adminPresenter = new AdminPresenter(this);
@@ -161,11 +163,15 @@ public class AdminView extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_addNewUser) {
-            Toast.makeText(this, "Hello World", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(AdminView.this, UserSettingsView.class));
         }
 
         if (id == R.id.nav_changeCommission) {
             startActivity(new Intent(AdminView.this, CommissionView.class));
+        }
+
+        if (id == R.id.nav_expenses) {
+            startActivity(new Intent(AdminView.this, ExpensesView.class));
         }
 
     /*    if (id == R.id.nav_home) {

@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/et_sales_barcode"
+            android:id="@+id/et_items_barcode"
             android:layout_width="0dp"
             android:layout_height="40sp"
             android:layout_weight="0.9"
@@ -37,14 +37,15 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp">
+        android:layout_margin="5dp"
+        android:visibility="visible">
 
         <LinearLayout
             android:id="@+id/ll_back_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             android:gravity="center">
 
             <ImageView
@@ -70,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"

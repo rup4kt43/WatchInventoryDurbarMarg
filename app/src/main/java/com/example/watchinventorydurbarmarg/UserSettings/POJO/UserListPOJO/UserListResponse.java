@@ -1,11 +1,11 @@
-package com.example.watchinventorydurbarmarg.UserLogin.POJO;
+package com.example.watchinventorydurbarmarg.UserSettings.POJO.UserListPOJO;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 
-public class Result {
+public class UserListResponse {
 
     @SerializedName("formatters")
     private List<Object> formatters;
@@ -17,7 +17,7 @@ public class Result {
     private List<Object> contentTypes;
 
     @SerializedName("value")
-    private Value value;
+    private List<ValueItem> value;
 
     @SerializedName("statusCode")
     private int statusCode;
@@ -46,11 +46,11 @@ public class Result {
         return contentTypes;
     }
 
-    public void setValue(Value value) {
+    public void setValue(List<ValueItem> value) {
         this.value = value;
     }
 
-    public Value getValue() {
+    public List<ValueItem> getValue() {
         return value;
     }
 
@@ -65,7 +65,7 @@ public class Result {
     @Override
     public String toString() {
         return
-                "Result{" +
+                "UserListResponse{" +
                         "formatters = '" + formatters + '\'' +
                         ",declaredType = '" + declaredType + '\'' +
                         ",contentTypes = '" + contentTypes + '\'' +

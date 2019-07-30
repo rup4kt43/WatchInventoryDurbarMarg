@@ -1,6 +1,7 @@
-package com.example.watchinventorydurbarmarg.SalesModule.API;
+package com.example.watchinventorydurbarmarg.Expenses.API;
 
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -8,25 +9,26 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.watchinventorydurbarmarg.SalesModule.POJO.SalesResponse;
 import com.example.watchinventorydurbarmarg.Utilities.GlobalContext;
-import com.google.gson.Gson;
 
-public class SalesAPI {
+public class ExpenseAPI {
 
-    public void loadDetails(String barcode) {
-        // String url = "http://" + LoginIPaddress.ipAddress + "/api/loadDetails?barcode=" + barcode;
-        String url = "http://192.168.125.150:45455/api/loadDetails?bcode=" + barcode;
+
+    public void apiCall(String date, String expense, Double amount, String payment_mode) {
+        String url = "http://192.168.125.196:45457/api/saveexpenditure?date=" + date + "&particular=" + expense + "&amount=" + amount +
+                "&paymentmode=" + payment_mode;
+
+
+        Log.e("URL:" ,url);
+        Log.e("URL:" ,url);
+
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.e("Response", response);
-                SalesResponse salesDTO = new Gson().fromJson(response, SalesResponse.class);
-                Log.e("Model", salesDTO.getResult().getValue().getMODEL());
-                Log.e("MRP", String.valueOf(salesDTO.getResult().getValue().getRATEA()));
-                Log.e("CostPrice", String.valueOf(salesDTO.getResult().getValue().getPRATEA()));
-                Log.e("PurchaseDate ", String.valueOf(salesDTO.getResult().getValue().getPURCHASEDATE()));
+                Toast.makeText(GlobalContext.getAppContext(), response.toString(), Toast.LENGTH_SHORT).show();
+
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -37,7 +39,5 @@ public class SalesAPI {
         });
         RequestQueue requestQueue = Volley.newRequestQueue(GlobalContext.getAppContext());
         requestQueue.add(stringRequest);
-
-
     }
 }

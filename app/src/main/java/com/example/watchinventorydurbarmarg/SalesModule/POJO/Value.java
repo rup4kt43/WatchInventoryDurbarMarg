@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.SalesModule.DTO;
+package com.example.watchinventorydurbarmarg.SalesModule.POJO;
 
 import com.google.gson.annotations.SerializedName;
 

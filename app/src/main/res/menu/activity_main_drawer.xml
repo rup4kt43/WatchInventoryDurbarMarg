@@ -31,6 +31,10 @@
                 android:id="@+id/nav_addNewUser"
                 android:icon="@drawable/user_settings"
                 android:title="User Settings"/>
+
+            <item
+                android:title="Expenses"
+                android:id="@+id/nav_expenses"/>
         </menu>
     </item>
 

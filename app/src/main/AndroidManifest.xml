@@ -11,13 +11,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
         <activity
             android:name=".CashierModule.View.CashierView"
             android:label="@string/title_activity_cashier"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".UserLogin.View.UserLoginView"
+            android:name=".Expenses.View.ExpensesView"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -27,10 +33,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AdminModule.View.AdminView" />
+        <activity
+            android:name=".UserLogin.View.UserLoginView"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SalesModule.View.SalesView" />
         <activity android:name=".CartModule.View.CartView" />
-        <activity android:name=".Commission.View.CommissionView"/>
+        <activity android:name=".Commission.View.CommissionView" />
+        <activity android:name=".UserSettings.View.UserSettingsView" />
+        <activity android:name=".AdminModule.View.AdminView" />
     </application>
 
 </manifest>

@@ -2,133 +2,75 @@ package com.example.watchinventorydurbarmarg.UserLogin.POJO;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 
 public class LoginResponse {
 
-    @SerializedName("result")
-    private Result result;
+    @SerializedName("formatters")
+    private List<Object> formatters;
 
-    @SerializedName("exception")
-    private Object exception;
+    @SerializedName("declaredType")
+    private Object declaredType;
 
-    @SerializedName("asyncState")
-    private Object asyncState;
+    @SerializedName("contentTypes")
+    private List<Object> contentTypes;
 
-    @SerializedName("isFaulted")
-    private boolean isFaulted;
+    @SerializedName("value")
+    private List<ValueItem> value;
 
-    @SerializedName("isCanceled")
-    private boolean isCanceled;
+    @SerializedName("statusCode")
+    private int statusCode;
 
-    @SerializedName("creationOptions")
-    private int creationOptions;
-
-    @SerializedName("isCompletedSuccessfully")
-    private boolean isCompletedSuccessfully;
-
-    @SerializedName("id")
-    private int id;
-
-    @SerializedName("status")
-    private int status;
-
-    @SerializedName("isCompleted")
-    private boolean isCompleted;
-
-    public void setResult(Result result) {
-        this.result = result;
+    public void setFormatters(List<Object> formatters) {
+        this.formatters = formatters;
     }
 
-    public Result getResult() {
-        return result;
+    public List<Object> getFormatters() {
+        return formatters;
     }
 
-    public void setException(Object exception) {
-        this.exception = exception;
+    public void setDeclaredType(Object declaredType) {
+        this.declaredType = declaredType;
     }
 
-    public Object getException() {
-        return exception;
+    public Object getDeclaredType() {
+        return declaredType;
     }
 
-    public void setAsyncState(Object asyncState) {
-        this.asyncState = asyncState;
+    public void setContentTypes(List<Object> contentTypes) {
+        this.contentTypes = contentTypes;
     }
 
-    public Object getAsyncState() {
-        return asyncState;
+    public List<Object> getContentTypes() {
+        return contentTypes;
     }
 
-    public void setIsFaulted(boolean isFaulted) {
-        this.isFaulted = isFaulted;
+    public void setValue(List<ValueItem> value) {
+        this.value = value;
     }
 
-    public boolean isIsFaulted() {
-        return isFaulted;
+    public List<ValueItem> getValue() {
+        return value;
     }
 
-    public void setIsCanceled(boolean isCanceled) {
-        this.isCanceled = isCanceled;
+    public void setStatusCode(int statusCode) {
+        this.statusCode = statusCode;
     }
 
-    public boolean isIsCanceled() {
-        return isCanceled;
-    }
-
-    public void setCreationOptions(int creationOptions) {
-        this.creationOptions = creationOptions;
-    }
-
-    public int getCreationOptions() {
-        return creationOptions;
-    }
-
-    public void setIsCompletedSuccessfully(boolean isCompletedSuccessfully) {
-        this.isCompletedSuccessfully = isCompletedSuccessfully;
-    }
-
-    public boolean isIsCompletedSuccessfully() {
-        return isCompletedSuccessfully;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setIsCompleted(boolean isCompleted) {
-        this.isCompleted = isCompleted;
-    }
-
-    public boolean isIsCompleted() {
-        return isCompleted;
+    public int getStatusCode() {
+        return statusCode;
     }
 
     @Override
     public String toString() {
         return
                 "LoginResponse{" +
-                        "result = '" + result + '\'' +
-                        ",exception = '" + exception + '\'' +
-                        ",asyncState = '" + asyncState + '\'' +
-                        ",isFaulted = '" + isFaulted + '\'' +
-                        ",isCanceled = '" + isCanceled + '\'' +
-                        ",creationOptions = '" + creationOptions + '\'' +
-                        ",isCompletedSuccessfully = '" + isCompletedSuccessfully + '\'' +
-                        ",id = '" + id + '\'' +
-                        ",status = '" + status + '\'' +
-                        ",isCompleted = '" + isCompleted + '\'' +
+                        "formatters = '" + formatters + '\'' +
+                        ",declaredType = '" + declaredType + '\'' +
+                        ",contentTypes = '" + contentTypes + '\'' +
+                        ",value = '" + value + '\'' +
+                        ",statusCode = '" + statusCode + '\'' +
                         "}";
     }
 }

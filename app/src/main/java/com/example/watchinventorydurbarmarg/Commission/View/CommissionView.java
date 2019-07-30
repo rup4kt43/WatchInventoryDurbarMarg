@@ -40,15 +40,17 @@ public class CommissionView extends AppCompatActivity implements CommissionContr
         com_dis_5 = findViewById(R.id.tv_dis_5);
         com_dis_10 = findViewById(R.id.tv_dis_10);
         com_dis_15 = findViewById(R.id.tv_dis_15);
-       /* barcode = findViewById(R.id.et_commision_load_barcode);
+        barcode = findViewById(R.id.et_items_barcode);
 
+
+        //API Call!!!
         loadDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String text = barcode.getText().toString();
                 presenter.onClickLoadDetails(text);
             }
-        });*/
+        });
         com_dis_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
