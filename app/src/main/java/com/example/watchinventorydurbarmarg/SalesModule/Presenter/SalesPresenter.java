@@ -2,6 +2,7 @@ package com.example.watchinventorydurbarmarg.SalesModule.Presenter;
 
 import com.example.watchinventorydurbarmarg.SalesModule.Contracts.SalesContracts;
 import com.example.watchinventorydurbarmarg.SalesModule.Model.SalesModel;
+import com.example.watchinventorydurbarmarg.SalesModule.POJO.BarcodeResponse;
 import com.example.watchinventorydurbarmarg.SalesModule.View.SalesView;
 
 public class SalesPresenter implements SalesContracts.presenter {
@@ -17,7 +18,12 @@ public class SalesPresenter implements SalesContracts.presenter {
     @Override
     public void LoadDetails(String barcode) {
         if(!barcode.isEmpty()){
-            model.loadDataDetails(barcode);
+            model.loadDataDetails(barcode, new SalesContracts.presenterModelCallback() {
+                @Override
+                public void onSuccessResponse(BarcodeResponse barcodeResponse) {
+                    view.loadBarcodeDetails(barcodeResponse);
+                }
+            });
         }else{
             view.showToast("Barcode Field Cannot be empty!");
         }

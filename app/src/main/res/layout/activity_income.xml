@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="USER: "
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+       />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <EditText
+
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/et_datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Enter Date"
+            android:textSize="13sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <EditText
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/et_expense"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:hint="Enter Income"
+            android:singleLine="false"
+            android:textSize="13sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:textSize="13sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_cheque"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:checked="true"
+            android:text="Cheque"
+            android:textSize="13sp"
+
+            />
+
+        <RadioButton
+            android:id="@+id/rb_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#fafafa"
+        android:text="Submit"
+        android:textColor="#008577"
+        android:textSize="13sp" />
+
+</LinearLayout>

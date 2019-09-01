@@ -13,6 +13,11 @@ public class UserLoginModel {
             public void onSuccessResponse(String msg) {
                 callBack.onSuccessResponse(msg);
             }
+
+            @Override
+            public void onErrorResponse(String msg) {
+                callBack.onErrorResponse(msg);
+            }
         });
     }
 }

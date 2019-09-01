@@ -1,4 +1,4 @@
-package com.example.watchinventorydurbarmarg.Expenses.API;
+package com.example.watchinventorydurbarmarg.Income.API;
 
 import android.util.Log;
 import android.widget.Toast;
@@ -11,18 +11,16 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.watchinventorydurbarmarg.Utilities.GlobalContext;
 
-public class ExpenseAPI {
+public class IncomeApi {
 
 
     public void apiCall(String date, String expense, Double amount, String payment_mode) {
+        String url = "http://192.168.125.196:45457/api/saveexpenditure?date=" + date + "&particular=" + expense + "&amount=" + amount +
+                "&paymentmode=" + payment_mode+"&mainhead="+"a";
 
 
-        String url = "http://192.168.125.144:45455/api/saveTransaction?date=" + date + "&particular=" + expense + "&amount=" + amount +
-                "&paymentmode=" + payment_mode + "&mainhead=" + "E";
-
-
-        Log.e("URL:", url);
-        Log.e("URL:", url);
+        Log.e("URL:" ,url);
+        Log.e("URL:" ,url);
 
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {

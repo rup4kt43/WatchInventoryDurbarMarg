@@ -2,15 +2,19 @@ package com.example.watchinventorydurbarmarg.AdminModule.Contracts;
 
 public interface AdminContracts {
 
-    interface adapterCallback{
+    interface adapterCallback {
         void onClickResponse(String msg);
+
+
     }
 
-    interface view{
+    interface view {
         void showToast(String msg);
+
+
     }
 
-    interface presenter{
+    interface presenter {
         void onSpinnerSelectedItem(String msg);
     }
 }

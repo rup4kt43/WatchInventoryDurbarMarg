@@ -16,10 +16,12 @@ public interface UserLoginContracts {
 
     interface modelAPICallBack{
         void onSuccessResponse(String msg);
+        void onErrorResponse(String msg);
 
     }
 
     interface presenterModelCallBack{
         void onSuccessResponse(String msg);
+        void onErrorResponse(String msg);
     }
 }

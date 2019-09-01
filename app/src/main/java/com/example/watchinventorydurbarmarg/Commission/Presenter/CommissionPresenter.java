@@ -18,8 +18,9 @@ public class CommissionPresenter implements CommissionContracts.presenter {
 
         if (!barcode.isEmpty()) {
             model.loadDetails(barcode);
-        } else
-            return;
+        } else{
+            view.showToast("Please enter the barcode to load the data!!!");
+        }
 
     }
 }

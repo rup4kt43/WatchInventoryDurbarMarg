@@ -44,6 +44,11 @@ public class UserLoginPresenter implements UserLoginContracts.presenter {
                             return;
                     }
                 }
+
+                @Override
+                public void onErrorResponse(String msg) {
+                    view.showToast(msg);
+                }
             });
         }
     }

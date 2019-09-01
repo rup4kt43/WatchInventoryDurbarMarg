@@ -2,42 +2,55 @@ package com.example.watchinventorydurbarmarg.SalesModule.POJO;
 
 import com.google.gson.annotations.SerializedName;
 
+public class ValueItem {
 
-public class Value {
+    @SerializedName("MCODE")
+    private String mCODE;
 
     @SerializedName("PRATE_A")
-    private int pRATEA;
+    private double pRATEA;
 
     @SerializedName("RATE_A")
-    private int rATEA;
+    private double rATEA;
 
     @SerializedName("MODEL")
-    private String mODEL;
+    private Object mODEL;
 
     @SerializedName("PURCHASE_DATE")
     private String pURCHASEDATE;
 
-    public void setPRATEA(int pRATEA) {
+    @SerializedName("DESCA")
+    private String dESCA;
+
+    public void setMCODE(String mCODE) {
+        this.mCODE = mCODE;
+    }
+
+    public String getMCODE() {
+        return mCODE;
+    }
+
+    public void setPRATEA(double pRATEA) {
         this.pRATEA = pRATEA;
     }
 
-    public int getPRATEA() {
+    public double getPRATEA() {
         return pRATEA;
     }
 
-    public void setRATEA(int rATEA) {
+    public void setRATEA(double rATEA) {
         this.rATEA = rATEA;
     }
 
-    public int getRATEA() {
+    public double getRATEA() {
         return rATEA;
     }
 
-    public void setMODEL(String mODEL) {
+    public void setMODEL(Object mODEL) {
         this.mODEL = mODEL;
     }
 
-    public String getMODEL() {
+    public Object getMODEL() {
         return mODEL;
     }
 
@@ -49,14 +62,24 @@ public class Value {
         return pURCHASEDATE;
     }
 
+    public void setDESCA(String dESCA) {
+        this.dESCA = dESCA;
+    }
+
+    public String getDESCA() {
+        return dESCA;
+    }
+
     @Override
     public String toString() {
         return
-                "Value{" +
-                        "pRATE_A = '" + pRATEA + '\'' +
+                "ValueItem{" +
+                        "mCODE = '" + mCODE + '\'' +
+                        ",pRATE_A = '" + pRATEA + '\'' +
                         ",rATE_A = '" + rATEA + '\'' +
                         ",mODEL = '" + mODEL + '\'' +
                         ",pURCHASE_DATE = '" + pURCHASEDATE + '\'' +
+                        ",dESCA = '" + dESCA + '\'' +
                         "}";
     }
 }

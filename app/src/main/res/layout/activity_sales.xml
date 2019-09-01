@@ -34,6 +34,7 @@
     </LinearLayout>
 
     <android.support.v7.widget.CardView
+
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-
+            android:visibility="gone"
             android:gravity="center">
 
             <ImageView
@@ -70,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:visibility="gone">
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,6 +107,7 @@
                             android:text="MODEL        :" />
 
                         <TextView
+                            android:id="@+id/tv_model_name"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.6"
@@ -121,12 +123,14 @@
                         android:padding="4dp">
 
                         <TextView
+
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.5"
                             android:text="MRP             :" />
 
                         <TextView
+                            android:id="@+id/tv_mrp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.6"
@@ -148,7 +152,7 @@
                             android:text="Cost Price   :" />
 
                         <TextView
-
+                            android:id="@+id/tv_cp"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.6"
@@ -170,6 +174,7 @@
                             android:text="Purchase Date             :" />
 
                         <TextView
+                            android:id="@+id/tv_purchase_date"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.5"
@@ -185,9 +190,18 @@
             </LinearLayout>
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.6"></LinearLayout>
+                android:layout_weight="0.6">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_specification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
 
 
         </LinearLayout>

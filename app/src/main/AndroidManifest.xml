@@ -23,9 +23,9 @@
             android:label="@string/title_activity_cashier"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".Expenses.View.ExpensesView"
+            android:name=".UserLogin.View.UserLoginView"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,13 +34,14 @@
         </activity>
 
         <activity
-            android:name=".UserLogin.View.UserLoginView"
+            android:name=".Expenses.View.ExpensesView"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SalesModule.View.SalesView" />
         <activity android:name=".CartModule.View.CartView" />
         <activity android:name=".Commission.View.CommissionView" />
         <activity android:name=".UserSettings.View.UserSettingsView" />
-        <activity android:name=".AdminModule.View.AdminView" />
+        <activity android:name=".AdminModule.View.AdminView"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

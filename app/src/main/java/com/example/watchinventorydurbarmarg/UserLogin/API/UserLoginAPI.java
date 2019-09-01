@@ -21,7 +21,7 @@ public class UserLoginAPI {
         //  Log.e("PASS", password);
 
         String url = "http://" + LoginIPaddress.ipAddress + "/api/login?username=" + uname + "&password=" + password;
-        Log.e("URL MSG",url);
+        Log.e("URL MSG", url);
 
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
@@ -29,7 +29,10 @@ public class UserLoginAPI {
             public void onResponse(String response) {
                 LoginResponse loginResponse = new Gson().fromJson(response, LoginResponse.class);
                 String role = String.valueOf(loginResponse.getValue().get(0).getROLE());
-                callBack.onSuccessResponse(role);
+                if (role.isEmpty()) {
+                    callBack.onErrorResponse("There was error on signing in!!!");
+                } else
+                    callBack.onSuccessResponse(role);
 
             }
         }, new Response.ErrorListener() {
@@ -44,8 +47,6 @@ public class UserLoginAPI {
 
 
     }
-
-
 
 
 }

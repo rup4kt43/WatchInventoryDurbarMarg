@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class CartDatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "watch_inventory.db";
+    public static final String DATABASE_NAME = "sulax.db";
     public static final String TABLE_NAME = "cart_table";
     public static final String CART_COL_1 = "ID";
     public static final String CART_COL_2 = "NAME";
@@ -27,7 +27,7 @@ public class CartDatabaseHelper extends SQLiteOpenHelper {
 
 
     public CartDatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, 2);
     }
 
     public static final String Create_Table_Cart = "CREATE TABLE " + TABLE_NAME + "(" + CART_COL_1 + " INTEGER, " + CART_COL_2 + " TEXT, "
@@ -187,6 +187,7 @@ public class CartDatabaseHelper extends SQLiteOpenHelper {
         }
         return 1;
     }
+ 
 
 
 }

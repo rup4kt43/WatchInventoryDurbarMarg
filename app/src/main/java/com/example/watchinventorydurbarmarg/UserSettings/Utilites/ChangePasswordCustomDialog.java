@@ -11,9 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.watchinventorydurbarmarg.UserSettings.View.UserSettingsView;
 import com.example.watchinventorydurbarmarg.R;
-import com.example.watchinventorydurbarmarg.Utilities.GlobalContext;
+import com.example.watchinventorydurbarmarg.UserSettings.View.UserSettingsView;
 
 public class ChangePasswordCustomDialog {
 
@@ -54,7 +53,7 @@ public class ChangePasswordCustomDialog {
                 if (pass.getText().toString().isEmpty() || retype.getText().toString().isEmpty()) {
                     context.showToast("Field cannot be empty!!");
                 } else {
-                    context.changePass(uName,pass.getText().toString(),retype.getText().toString());
+                    context.changePass(uName, pass.getText().toString(), retype.getText().toString());
                 }
             }
         });
