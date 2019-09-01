@@ -15,6 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,11 +36,27 @@ public class CashierView extends AppCompatActivity
     public static TextView cartBadgeCount;
     private RecyclerView recyclerView;
     private CashierPresenter presenter;
+    EditText et_itemsBarCode;
+     ImageView btn_loadDetails;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cashier2);
+
+        et_itemsBarCode=findViewById(R.id.et_items_barcode);
+        btn_loadDetails=findViewById(R.id.btn_loadDetails);
+
+        btn_loadDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String barCode=et_itemsBarCode.getText().toString();
+                presenter.barcodeReader(barCode);
+            }
+        });
+
+
 
         //Initializing object of presenter
         presenter = new CashierPresenter(this);

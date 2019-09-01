@@ -6,14 +6,80 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".CashierModule.View.CashierView"
+    android:padding="10dp"
+    android:orientation="vertical"
     tools:showIn="@layout/app_bar_cashier">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_brands"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_items_barcode"
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_weight="0.9"
+            android:background="@drawable/new_edit_text_box"
+            android:gravity="center"
+            android:hint="BARCODE HERE" />
 
 
-    </android.support.v7.widget.RecyclerView>
+        <ImageView
+            android:id="@+id/btn_loadDetails"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:padding="4dp"
+            android:src="@drawable/proceed_check" />
+
+    </LinearLayout>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="300dp"-->
+        <!--android:layout_marginStart="30dp"-->
+        <!--android:layout_marginLeft="30dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_marginEnd="30dp"-->
+        <!--android:layout_marginRight="30dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/linearLayout"-->
+        <!--app:layout_constraintHorizontal_bias="0.555"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/linearLayout"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/linearLayout"-->
+        <!--app:layout_constraintVertical_bias="0.145" />-->
+
+    <!--<Button-->
+
+        <!--android:id="@+id/btn_click"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="30dp"-->
+        <!--android:layout_marginLeft="30dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="30dp"-->
+        <!--android:layout_marginRight="30dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:background="@drawable/button_design"-->
+        <!--android:text="Click"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/imageView3"-->
+        <!--app:layout_constraintVertical_bias="0.223" />-->
+
 
 </android.support.constraint.ConstraintLayout>

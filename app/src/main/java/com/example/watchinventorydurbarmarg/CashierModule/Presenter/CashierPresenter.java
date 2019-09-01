@@ -32,15 +32,36 @@ public class CashierPresenter implements CashierContracts.presenter{
                     case "Quantity":
                         view.showToast("Quantity Increased");
                         break;
+                    case "Barcode":
+                        view.showToast("barcode entered");
+
                     default:
                         return;
                 }
             }
+
+            @Override
+            public void barcode(String barcodeResult) {
+
+            }
         });
+
+
     }
 
     @Override
     public void clearDatabase() {
         model.clearDatabase();
     }
-}
+
+    public void barcodeReader(String barCode) {
+        if (barCode.isEmpty()){
+            view.showToast("enter barcode");
+        }else{
+           model.verifyBarCode(barCode);
+
+            }
+        }
+
+    }
+
