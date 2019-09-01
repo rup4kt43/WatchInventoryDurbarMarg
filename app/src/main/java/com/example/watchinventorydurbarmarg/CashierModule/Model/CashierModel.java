@@ -13,10 +13,14 @@ public class CashierModel {
         cartDatabaseHelper = new CartDatabaseHelper(GlobalContext.getAppContext());
     }
 
+    public  void verifyBarCode(String barCode) {
+
+    }
+
+
     public void addToCartDatabase(String name, CashierContracts.presenterModelCallback callback) {
 
         this.callBack = callback;
-
 
         String result = cartDatabaseHelper.insertCartDetails(name);
         callback.addToCartResult(result);

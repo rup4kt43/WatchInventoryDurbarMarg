@@ -18,6 +18,7 @@ public interface CashierContracts {
 
     interface presenterModelCallback {
         void addToCartResult(String result);
+       void barcode(String barcodeResult);
     }
 
 
